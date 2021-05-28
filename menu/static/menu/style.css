@@ -1,0 +1,73 @@
+:root {
+    --color1: #dd7835;
+    --colorgrey: #d8d8d8;
+}
+
+body {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/menu_background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* logo image */
+img.logo-image {
+    margin: 25px 0px 0px 35px;
+}
+
+.menu_title {
+    margin-top: 45px;
+    margin-bottom: 50px;
+}
+
+h1 {
+    background-color: var(--color1);
+    display: inline;
+    padding: 8px 22px;
+}
+
+.menu_list {
+    margin-left: 30px;
+}
+
+.menu_list_item {
+    margin: 30px 0px;
+}
+
+.menu_list_item_name {
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    width: 350px;
+}
+
+.menu_list_item_price {
+    font-size: 20px;
+    color: var(--color1);
+    margin-left: 8px;
+    display: inline-block;
+    width: 70px;
+    text-align: right;
+}
+
+.menu_list_item_ingredients {
+    font-size: 14px;
+    color: #D8D8D8;
+    margin-top: 4px;
+    display: block;
+    width: 320px;
+}
+
+.vegetarian {
+    display: inline-block;
+    background-color: var(--color1);
+    color: black;
+    font-size: 9px;
+    padding: 3px 8px;
+    border-radius: 8px;
+    font-weight: bold;
+}

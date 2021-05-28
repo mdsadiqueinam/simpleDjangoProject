@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'menu/style.css' %}">
+    <title>Our Pizza</title>
+</head>
+<body>
+    <!-- logo image -->
+    <a href="{% url 'main:index' %}"><img class="logo-image" src="{% static 'menu/images/small_logo.png' %}" alt="pizzamama logo"></a>
+    <div class="menu_title">
+        <h1>Our Pizzas</h1>
+    </div>
+
+    <div class="menu_list">
+        {% for pizza in pizzas %}
+            <div class="menu_list_item">
+                <span class="menu_list_item_name">{{pizza.name}}</span><span class="menu_list_item_price">  {{pizza.price | floatformat:2}}$</span>
+                <span class="menu_list_item_ingredients">{{pizza.ingredients}}</span>
+                {% if pizza.vegetarian %}
+                    <div class="vegetarian">VEGETARIAN</div>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
